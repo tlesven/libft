@@ -89,11 +89,12 @@ $(NAME): $(FILEOBJ)
 
 $(FILEOBJ): $(FILESRC)
 	@$(CC) $(CFLAGS) $(FILESRC)
+	@mkdir obj
 	@mv $(OBJ) $(PATHOBJ)
 	@echo "objects done"
 
 clean:
-	@$(RM) $(FILEOBJ)
+	@$(RM) obj
 	@echo "objects deleted"
 
 fclean: clean
