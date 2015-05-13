@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/22 19:28:34 by tlesven           #+#    #+#             */
-/*   Updated: 2015/03/11 11:12:49 by tlesven          ###   ########.fr       */
+/*   Updated: 2015/05/13 13:53:37 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static char			*ft_filltab(char const *s, char *tab, char c)
 
 	i = 0;
 	split = ft_tilnxtsplit(s, c);
-	tab = (char *)malloc(sizeof(char) * split);
+	tab = (char *)ft_memalloc(sizeof(char) * split);
 	while (*s != c && *s)
 		tab[i++] = *(s++);
 	tab[i] = '\0';
@@ -79,11 +79,11 @@ char				**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	split = ft_splitnum(s, c);
-	tab = (char **)malloc(sizeof(char *) * (split + 1));
+	tab = (char **)ft_memalloc(sizeof(char *) * (split + 1));
 	if (!(tab))
 		return (NULL);
 	if (!*s)
-		tab[i] = (char *)malloc(1);
+		tab[i] = (char *)ft_memalloc(1);
 	while (split--)
 	{
 		s = ft_nextsplit(s, c);

@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/27 14:48:49 by tlesven           #+#    #+#             */
-/*   Updated: 2014/04/16 12:51:18 by tlesven          ###   ########.fr       */
+/*   Updated: 2015/05/13 13:55:34 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char			*ft_strtrim(char const *s)
 	int		i;
 	int		j;
 
-	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(*str));
+	str = (char *)ft_memalloc((ft_strlen(s) + 1) * sizeof(*str));
 	if (str == NULL)
 		return (NULL);
 	i = 0;

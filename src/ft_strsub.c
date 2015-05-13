@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/26 15:55:32 by tlesven           #+#    #+#             */
-/*   Updated: 2014/01/27 13:08:41 by tlesven          ###   ########.fr       */
+/*   Updated: 2015/05/13 13:54:02 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(len * sizeof(*str) + 1);
+	str = (char *)ft_memalloc(len * sizeof(*str) + 1);
 	if (str == NULL)
 		return (NULL);
 	while (len)
