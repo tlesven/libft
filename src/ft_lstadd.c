@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tlesven <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 15:27:00 by tlesven           #+#    #+#             */
-/*   Updated: 2015/03/31 13:26:15 by tlesven          ###   ########.fr       */
+/*   Created: 2015/03/24 18:41:51 by tlesven           #+#    #+#             */
+/*   Updated: 2015/03/24 18:57:03 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int		i;
+	t_list *l;
 
-	i = 0;
-	while (1)
-	{
-		if (s1[i] == '\200' && s2[i] == '\0')
-			return (s2[i] - s1[i]);
-		if (s1[i] != s2[i])
-			break ;
-		if (s1[i] == '\0' || s2[i] == '\0')
-			break ;
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	l = *alst;
+	*alst = new;
+	new->next = l;
+	return ;
 }

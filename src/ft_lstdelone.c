@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lsdelone.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 18:05:55 by tlesven           #+#    #+#             */
-/*   Updated: 2015/03/31 17:19:29 by tlesven          ###   ########.fr       */
+/*   Created: 2015/03/24 16:14:49 by tlesven           #+#    #+#             */
+/*   Updated: 2015/03/24 19:59:33 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-size_t		ft_strlcat(char *dst, const char *src, size_t size)
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t i;
-
-	if (ft_strlen(dst) >= size)
-	{
-		i = size + ft_strlen(src);
-		return (i);
-	}
-	else
-		i = ft_strlen(dst) + ft_strlen(src);
-	if (i >= size)
-	{
-		ft_strncat(dst, src, (size - ft_strlen(dst) - 1));
-		return (i);
-	}
-	else
-	{
-		ft_strcat(dst, src);
-		return (i);
-	}
-	return (i);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
+	alst = NULL;
+	return ;
 }

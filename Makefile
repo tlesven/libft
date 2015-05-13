@@ -6,7 +6,7 @@
 #    By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 10:12:21 by tlesven           #+#    #+#              #
-#    Updated: 2015/03/11 11:11:34 by tlesven          ###   ########.fr        #
+#    Updated: 2015/03/31 15:54:33 by tlesven          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,8 +71,13 @@ SRC=ft_strcat.c \
 	ft_strtrim.c \
 	ft_itoa.c \
 	ft_strsplit.c \
-	get_next_line.c \
-	ft_strdeltab.c
+	ft_strdeltab.c \
+	ft_lstnew.c \
+	ft_lstdelone.c \
+	ft_lstdel.c \
+	ft_lstadd.c\
+	ft_lstiter.c\
+	ft_lstmap.c
 OBJ=$(subst .c,.o,$(SRC))
 PATHSRC=src/
 PATHOBJ=obj/

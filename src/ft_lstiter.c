@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tlesven <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 15:27:00 by tlesven           #+#    #+#             */
-/*   Updated: 2015/03/31 13:26:15 by tlesven          ###   ########.fr       */
+/*   Created: 2015/03/24 18:58:54 by tlesven           #+#    #+#             */
+/*   Updated: 2015/03/24 19:01:29 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int		i;
+	t_list *l;
 
-	i = 0;
-	while (1)
+	l = lst;
+	while (l)
 	{
-		if (s1[i] == '\200' && s2[i] == '\0')
-			return (s2[i] - s1[i]);
-		if (s1[i] != s2[i])
-			break ;
-		if (s1[i] == '\0' || s2[i] == '\0')
-			break ;
-		i++;
+		f(l);
+		l = l->next;
 	}
-	return (s1[i] - s2[i]);
+	return ;
 }
