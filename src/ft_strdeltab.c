@@ -6,11 +6,10 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/18 20:04:59 by tlesven           #+#    #+#             */
-/*   Updated: 2014/02/18 21:32:58 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 20:23:29 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void		ft_strdeltabl(char **tab, int nb)

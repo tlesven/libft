@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/27 14:48:49 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/19 19:35:12 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 20:50:38 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char			*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	str = (char *)ft_strnew(ft_strlen(s));
+	str = ft_strnew(ft_strlen(s));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
