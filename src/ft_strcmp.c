@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 15:27:00 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/19 15:53:17 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 16:01:06 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int		ft_strcmp(const char *s1, const char *s2)
 			break ;
 		i++;
 	}
-	return ((unsigned int)(s1[i] - s2[i]));
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
