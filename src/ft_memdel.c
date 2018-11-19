@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 10:17:20 by tlesven           #+#    #+#             */
-/*   Updated: 2013/11/26 15:01:33 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 18:45:02 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 void	ft_memdel(void **ap)
 {
-	free(*ap);
-	*ap = NULL;
+	if (ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }
