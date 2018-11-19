@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/24 15:57:49 by tlesven           #+#    #+#             */
-/*   Updated: 2015/03/24 16:17:23 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 19:57:42 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	t_list	*new;
 
 	new = ft_memalloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
 	new->next = NULL;
 	if (content == NULL)
 	{

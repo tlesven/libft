@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/03 21:59:45 by tlesven           #+#    #+#             */
-/*   Updated: 2015/05/13 13:51:59 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 20:00:52 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strndup(const char *s1, size_t n)
 	char			*scopy;
 	unsigned int	i;
 
-	scopy = (char*)ft_memalloc(sizeof(*scopy) * n + 1);
+	scopy = ft_strnew(n);
+	if(!scopy)
+		return (scopy);
 	i = 0;
 	while (i < n)
 	{
