@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/28 14:38:35 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/19 19:48:05 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 20:07:34 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,13 @@ static char			*pos(int n)
 
 char				*ft_itoa(int n)
 {
-	char	*minValue;
+	char	*min_value;
 
 	if (n == -2147483648)
 	{
-		minValue = ft_strnew(ft_strlen("-2147483648"));
-		ft_strcpy(minValue, "-2147483648");
-		return (minValue);
+		min_value = ft_strnew(ft_strlen("-2147483648"));
+		ft_strcpy(min_value, "-2147483648");
+		return (min_value);
 	}
 	if (n < 0)
 		return (neg(n));

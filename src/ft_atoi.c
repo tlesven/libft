@@ -6,17 +6,16 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/04/16 13:00:24 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/19 18:32:54 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 20:04:20 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 static int	ft_nbr(int neg, char *str)
 {
 	long long	result;
-	int		i;
+	int			i;
 
 	result = 0;
 	i = 0;
