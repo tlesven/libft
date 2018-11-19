@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/28 14:38:35 by tlesven           #+#    #+#             */
-/*   Updated: 2015/01/22 18:38:35 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 19:48:05 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ static char			*neg(int n)
 	int		i;
 
 	i = nb_char(n) + 1;
-	s = (char *)ft_memalloc(i + 1);
+	s = ft_strnew(i);
+	if (!s)
+		return (NULL);
 	n *= -1;
 	s[i] = '\0';
 	while (i--)
@@ -53,7 +55,9 @@ static char			*pos(int n)
 	int		i;
 
 	i = nb_char(n);
-	s = (char *)ft_memalloc(i + 1);
+	s = ft_strnew(i);
+	if (!s)
+		return (NULL);
 	s[i] = '\0';
 	while (i--)
 	{
@@ -65,8 +69,14 @@ static char			*pos(int n)
 
 char				*ft_itoa(int n)
 {
+	char	*minValue;
+
 	if (n == -2147483648)
-		return ("-2147483648");
+	{
+		minValue = ft_strnew(ft_strlen("-2147483648"));
+		ft_strcpy(minValue, "-2147483648");
+		return (minValue);
+	}
 	if (n < 0)
 		return (neg(n));
 	return (pos(n));
