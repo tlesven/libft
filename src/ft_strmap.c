@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/26 12:31:21 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/19 19:09:48 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 19:32:01 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	if (!s || !f)
 		return (NULL);
-	str = (char *)ft_memalloc(ft_strlen(s) + 1);
+	str = (char *)ft_strnew(ft_strlen(s));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
