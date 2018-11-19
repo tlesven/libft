@@ -6,14 +6,13 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/22 19:28:34 by tlesven           #+#    #+#             */
-/*   Updated: 2015/05/13 13:53:37 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/19 21:11:06 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static int			ft_splitnum(char const *s, char c)
+int			ft_splitnum(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	split;
@@ -38,14 +37,14 @@ static int			ft_splitnum(char const *s, char c)
 	return (split + first);
 }
 
-static char const	*ft_nextsplit(char const *s, char c)
+char const	*ft_nextsplit(char const *s, char c)
 {
 	while (*s == c && *s)
 		s++;
 	return (s);
 }
 
-static int			ft_tilnxtsplit(char const *s, char c)
+int			ft_tilnxtsplit(char const *s, char c)
 {
 	unsigned int	i;
 
@@ -55,21 +54,21 @@ static int			ft_tilnxtsplit(char const *s, char c)
 	return (i);
 }
 
-static char			*ft_filltab(char const *s, char *tab, char c)
+char		*ft_filltab(char const *s, char *tab, char c)
 {
 	unsigned int	i;
 	unsigned int	split;
 
 	i = 0;
 	split = ft_tilnxtsplit(s, c);
-	tab = (char *)ft_memalloc(sizeof(char) * split);
+	tab = ft_strnew(split);
 	while (*s != c && *s)
 		tab[i++] = *(s++);
 	tab[i] = '\0';
 	return (tab);
 }
 
-char				**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	split;
