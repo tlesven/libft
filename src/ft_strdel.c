@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 10:54:44 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/30 12:29:04 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/11/30 13:01:09 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_strdel(char **as)
 {
 	if (as)
 	{
-		ft_bzero(as, ft_strlen(*as));
 		free(*as);
 		*as = NULL;
 	}
