@@ -6,13 +6,13 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/22 19:28:34 by tlesven           #+#    #+#             */
-/*   Updated: 2018/11/19 21:11:06 by tlesven          ###   ########.fr       */
+/*   Updated: 2018/12/14 12:03:28 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_splitnum(char const *s, char c)
+static int			ft_splitnum(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	split;
@@ -37,14 +37,14 @@ int			ft_splitnum(char const *s, char c)
 	return (split + first);
 }
 
-char const	*ft_nextsplit(char const *s, char c)
+static char const	*ft_nextsplit(char const *s, char c)
 {
 	while (*s == c && *s)
 		s++;
 	return (s);
 }
 
-int			ft_tilnxtsplit(char const *s, char c)
+static int			ft_tilnxtsplit(char const *s, char c)
 {
 	unsigned int	i;
 
@@ -54,7 +54,7 @@ int			ft_tilnxtsplit(char const *s, char c)
 	return (i);
 }
 
-char		*ft_filltab(char const *s, char *tab, char c)
+static char		*ft_filltab(char const *s, char *tab, char c)
 {
 	unsigned int	i;
 	unsigned int	split;
